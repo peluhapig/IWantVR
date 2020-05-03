@@ -14,6 +14,13 @@ def email(website):
 
     server.sendmail(sender_email, receiver_email, message)
 
+def checkExists(xpath):
+    try:
+        driver.find_element_by_xpath(xpath)
+    except NoSuchElementException:
+        return False
+    return True
+
 while True: 
 
     driver = webdriver.Chrome(executable_path='chromedriver.exe')
@@ -25,9 +32,13 @@ while True:
             driver.get(i[0])
             time.sleep(4)
             xPath = i[1]
-            text = driver.find_element_by_xpath(xPath).text
-            if text != i[2]:
-                print("negative")
+            exists = checkExists(xPath)
+            if exists == True: 
+                text = driver.find_element_by_xpath(xPath).text
+                if text != i[2]:
+                    print("negative")
+                else:
+                    email(i[0])
             else:
                 email(i[0])
     time.sleep(60*60)
