@@ -43,6 +43,6 @@ while True:
             else:
                 print("positive")
                 email(i[0])
-    time.sleep(15*60)
+    time.sleep(5*60)
 
 
