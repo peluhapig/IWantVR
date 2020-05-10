@@ -22,7 +22,7 @@ def checkExists(xpath):
     return True
 
 while True: 
-    run =+ 1
+    run += 1
     print(run)
     driver = webdriver.Chrome(executable_path='chromedriver.exe')
     with open("websiteList.csv") as f:
