@@ -22,7 +22,8 @@ def checkExists(xpath):
     return True
 
 while True: 
-
+    run =+ 1
+    print(run)
     driver = webdriver.Chrome(executable_path='chromedriver.exe')
     with open("websiteList.csv") as f:
         reader = csv.reader(f)
@@ -44,5 +45,6 @@ while True:
                 print("positive")
                 email(i[0])
     time.sleep(5*60)
+    
 
 
