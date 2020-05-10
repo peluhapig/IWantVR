@@ -4,6 +4,7 @@ import csv
 import time
 import smtplib , ssl
 from login import sender_email, receiver_email, password
+run = 0
 def email(website):
 
     message = "Check this out this is the link:" + website
