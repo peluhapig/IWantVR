@@ -40,10 +40,10 @@ while True:
                 if text != i[2]:
                     print("negative")
                 else:
-                    print("positive")
+                    print("POSITIVE RIGHT HERE")
                     email(i[0])
             else:
-                print("positive")
+                print("POSITIVE RIGHT HERE")
                 email(i[0])
     time.sleep(8*60)
     
